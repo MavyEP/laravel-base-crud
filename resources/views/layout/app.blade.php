@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
   </head>
   <body>
-      {{-- @yield('content') --}}
-      <p>ciao</p>
+      @yield('content')
   </body>
 </html>
