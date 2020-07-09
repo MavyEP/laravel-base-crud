@@ -25,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('students.create');
     }
 
     /**
@@ -36,7 +36,16 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $data = $request->all();
+        // $new_student_form = new Student();
+        // $new_student_form->fill($data);
+        // $new_student_form->save();
+
+        // DOMANDA :: !!!!!!!! SE NEL MIO CASO HO BISOGNODI UN NUMERO Matricola
+        // RANDOM COME FACCIO A DIRE SOPRA CHE UNO DEI MIEI ELEMTNI DEVE ESSERE GENERATO RANDOM ??????
+        // ???????????!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
     }
 
     /**
@@ -45,9 +54,10 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Student $student)
     {
-        //
+        // $student = Student::find($id);
+        return view('students.show' , compact('student'));
     }
 
     /**

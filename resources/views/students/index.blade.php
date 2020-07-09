@@ -6,6 +6,7 @@
   <div class="container">
   <div class="row">
     <h1 class="mt-5 mb-5">Mw.School - STUDENTS</h1>
+    <a href="{{ route('students.create')}}">Add new student!</a>
     <table class="table">
       <thead>
         <tr>
@@ -17,7 +18,7 @@
       <tbody>
         @foreach ($student as $student_item)
           <tr>
-            <td>{{ $student_item->id }}</td>
+            <td> &#9872; {{ $student_item->id }}</td>
             <td>{{ $student_item->first_name }}</td>
             <td>
               <a href="{{ route('students.show' , ['student' => $student_item->id ])}}">Details</a>
