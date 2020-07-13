@@ -36,16 +36,11 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        // $data = $request->all();
-        // $new_student_form = new Student();
-        // $new_student_form->fill($data);
-        // $new_student_form->save();
-
-        // DOMANDA :: !!!!!!!! SE NEL MIO CASO HO BISOGNODI UN NUMERO Matricola
-        // RANDOM COME FACCIO A DIRE SOPRA CHE UNO DEI MIEI ELEMTNI DEVE ESSERE GENERATO RANDOM ??????
-        // ???????????!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
+        $data = $request->all();
+        $new_student_form = new Student();
+        $new_student_form->fill($data);
+        $new_student_form->save();
+        return redirect()->route('students.index');
     }
 
     /**
